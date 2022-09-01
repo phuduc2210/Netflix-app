@@ -1,6 +1,7 @@
 import { Notifications, Search, ArrowDropDown } from "@mui/icons-material"
 import "./navbar.scss"
 import { useState } from "react";
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,12 @@ const Navbar = () => {
                   <ArrowDropDown className="icon"/>
                   <div className="options">
                     <span>Settings</span>
+                    <Link to="/login" style={{color:"white", textDecoration:"none", paddingBottom:"10px"}}>
                     <span>Logout</span>
+                    </Link>
+                    <Link to="/register" style={{color:"white", textDecoration:"none", paddingBottom:"10px"}}>
+                    <span>Register</span>
+                    </Link>
                   </div>
                 </div>
             </div>
